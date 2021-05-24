@@ -9,17 +9,19 @@ import {
 } from "@material-ui/core";
 import MailOutlineRoundedIcon from "@material-ui/icons/MailOutlineRounded";
 
-import "../assets/css/formulario.css";
-
 const Contact = () => {
+  const button = { margin: "10px auto" };
+  const avatar = { backgroundColor: "#ff1780" };
+  const paper = { padding: "20px 30px", width: "300px", margin: "20px auto" };
+  const titulo = { margin: "0" };
   return (
     <Grid>
-      <Paper elevation={20} className="paper">
+      <Paper elevation={20} style={paper}>
         <Grid align="center">
-          <Avatar className="avatar">
+          <Avatar style={avatar}>
             <MailOutlineRoundedIcon />
           </Avatar>
-          <h2 className="titulo-form">Contactanos</h2>
+          <h2 style={titulo}>Contactanos</h2>
           <Typography variant="caption">
             Llena este formulario y nos pondremos en contacto contigo a la
             brevedd
@@ -34,7 +36,12 @@ const Contact = () => {
           />
           <TextField fullWidth label="Telefono" placeholder="Te llamaremos" />
           <TextField fullWidth label="Comentario" />
-          <Button type="submit" variant="contained" color="primary">
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            style={button}
+          >
             Enviar
           </Button>
         </form>
